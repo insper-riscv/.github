@@ -2,10 +2,11 @@
 
 🌐 [Português](https://github.com/insper-riscv/.github/blob/main/profile/README.md) · [English](https://github.com/insper-riscv/.github/blob/main/profile/README.en.md)
 
-A RISC-V (RV32I + M) processor in VHDL with a 5-stage in-order pipeline, built at
-[Insper](https://www.insper.edu.br) as a capstone project: the core, its memories and
-peripherals, the board platform (Cyclone V), and the tools, tests and certification
-around them.
+**Capstone project** of the Computer Engineering program at [Insper](https://www.insper.edu.br), led by
+professor **Rafael Corsi** ([@rafaelcorsi](https://github.com/rafaelcorsi),
+[rafael.corsi@insper.edu.br](mailto:rafael.corsi@insper.edu.br)), built by a new group of students each semester.
+The result is a RISC-V (RV32I + M) processor in VHDL with a 5-stage in-order pipeline: the core, its memories and
+peripherals, the board platform (Cyclone V), and the tools, tests and certification around them.
 
 Each repository has one responsibility. **Start at [RV32](https://github.com/insper-riscv/RV32)**:
 it pins a version of the others and runs everything together.
@@ -37,6 +38,17 @@ RV32 (parent, pins the versions)
  │                                     └─ Certification
  └─ Tools (inside each, as a submodule) ◄─ Infra (the image it runs in)
 ```
+
+## The groups
+
+Each group continued the work of the one before; the most recent comes first.
+
+| Period | Group | What it did | Where it is |
+| :--- | :--- | :--- | :--- |
+| 2026.1 | Henrique Rocha Bomfim, Pedro Carvalho Ribeiro Neto, Luiz Felipe Borelli Durand, Luka Siqueira Ferreira de Figueiredo | the 5-stage pipeline with the M extension, the tests and the KPIs | [RV32](https://github.com/insper-riscv/RV32) and [Core](https://github.com/insper-riscv/Core) |
+| 2025.2 | Ilana Finger, Leonardo Paloschi, Lucas Lima, Pedro Ventura | L2IP (an RV32I), the development and the test infrastructure, where Infra, Tools and Tests came from | `archive/l2ip` in [RV32](https://github.com/insper-riscv/RV32), and [Infra](https://github.com/insper-riscv/Infra), [Tools](https://github.com/insper-riscv/Tools) and [Tests](https://github.com/insper-riscv/Tests) in their current form |
+| 2025.1 | Pedro Paulo Moreno Camargo and [Vacbo](https://github.com/Vacbo) | the SoC and the peripherals | `riscv-SoC` and `FOSS-peripherals` (below) |
+| 2024 to early 2025 | Luciano Felix, Tiago Vitorino Seixas, Giancarlo Vanoni Ruggiero | the first core and the documentation | `core-old` and `docs` (below) |
 
 ## Where things are
 
