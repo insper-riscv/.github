@@ -4,7 +4,8 @@
 
 **Capstone project** of the Computer Engineering and Computer Science programs at [Insper](https://www.insper.edu.br), led by
 professor **Rafael Corsi** ([@rafaelcorsi](https://github.com/rafaelcorsi),
-[rafael.corsi@insper.edu.br](mailto:rafael.corsi@insper.edu.br)), built by a new group of students each semester.
+[rafael.corsi@insper.edu.br](mailto:rafael.corsi@insper.edu.br)), built by a new group of students each semester. The project is funded by
+[CTI Renato Archer](https://www.gov.br/cti/pt-br) (Centro de Tecnologia da Informação Renato Archer), the client of the Capstone.
 The result is a RISC-V (RV32I + M) processor in VHDL with a 5-stage in-order pipeline: the core, its memories and
 peripherals, the board platform (Cyclone V), and the tools, tests and certification around them.
 
