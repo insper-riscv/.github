@@ -2,7 +2,7 @@
 
 🌐 [Português](https://github.com/insper-riscv/.github/blob/main/profile/README.md) · [English](https://github.com/insper-riscv/.github/blob/main/profile/README.en.md)
 
-**Capstone project** of the Computer Engineering program at [Insper](https://www.insper.edu.br), led by
+**Capstone project** of the Computer Engineering and Computer Science programs at [Insper](https://www.insper.edu.br), led by
 professor **Rafael Corsi** ([@rafaelcorsi](https://github.com/rafaelcorsi),
 [rafael.corsi@insper.edu.br](mailto:rafael.corsi@insper.edu.br)), built by a new group of students each semester.
 The result is a RISC-V (RV32I + M) processor in VHDL with a 5-stage in-order pipeline: the core, its memories and
