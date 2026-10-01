@@ -65,9 +65,8 @@ Cada grupo continuou o trabalho do anterior; o mais recente está primeiro.
 
 ## Outros repositórios da organização
 
-O [Diagram-Generator](https://github.com/insper-riscv/Diagram-Generator) é independente da
-estrutura acima. `core-old`, `FOSS-peripherals`, `riscv-SoC`, `development-infrastructure` e
-`docs` são anteriores a ela e não fazem parte dela; o estado do projeto antes da divisão é a tag
+`core-old`, `FOSS-peripherals`, `riscv-SoC`, `development-infrastructure` e `docs` são anteriores à estrutura acima e não fazem
+parte dela; o estado do projeto antes da divisão é a tag
 `pre-refactor` em cada repositório acima, e o que foi aposentado fica nas tags `archive/*` do
 RV32.
 
