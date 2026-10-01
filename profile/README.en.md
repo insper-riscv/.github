@@ -3,9 +3,11 @@
 🌐 [Português](https://github.com/insper-riscv/.github/blob/main/profile/README.md) · [English](https://github.com/insper-riscv/.github/blob/main/profile/README.en.md)
 
 **Capstone project** of the Computer Engineering and Computer Science programs at [Insper](https://www.insper.edu.br), led by
-professor **Rafael Corsi** ([@rafaelcorsi](https://github.com/rafaelcorsi),
+professor **Rafael Corsi Ferrão** ([@rafaelcorsi](https://github.com/rafaelcorsi),
 [rafael.corsi@insper.edu.br](mailto:rafael.corsi@insper.edu.br)), built by a new group of students each semester. The project is funded by
-[CTI Renato Archer](https://www.gov.br/cti/pt-br) (Centro de Tecnologia da Informação Renato Archer), the client of the Capstone.
+[CTI Renato Archer](https://www.gov.br/cti/pt-br) (Centro de Tecnologia da Informação Renato Archer), a research institution of
+the Brazilian Ministry of Science, Technology and Innovation in Campinas, the client of the Capstone: in partnership with Insper, the
+goal is to develop a national processor and reduce Brazil's dependence on foreign semiconductor technology.
 The result is a RISC-V (RV32I + M) processor in VHDL with a 5-stage in-order pipeline: the core, its memories and
 peripherals, the board platform (Cyclone V), and the tools, tests and certification around them.
 
@@ -50,7 +52,7 @@ Each group continued the work of the one before; the most recent comes first.
 | 2026.1 | [Henrique Rocha Bomfim](https://github.com/HenriqueRBomfim), Pedro Carvalho Ribeiro Neto, [Luiz Felipe Borelli Durand](https://github.com/LuizDurand), [Luka Siqueira Ferreira de Figueiredo](https://github.com/lukafig) | the 5-stage pipeline with the M extension, the tests and the KPIs | [RV32](https://github.com/insper-riscv/RV32) and [Core](https://github.com/insper-riscv/Core) |
 | 2025.2 | [Ilana Chaia Finger](https://github.com/ilacftemp), [Leonardo Merlin Paloschi](https://github.com/leonardopaloschi), [Lucas Fernando De Souza Lima](https://github.com/lucasouzamil), [Pedro Pereira Cecilio Ventura](https://github.com/pedropcventura) | L2IP (an RV32I), the development and the test infrastructure, where Infra, Tools and Tests came from | `archive/l2ip` in [RV32](https://github.com/insper-riscv/RV32), and [Infra](https://github.com/insper-riscv/Infra), [Tools](https://github.com/insper-riscv/Tools) and [Tests](https://github.com/insper-riscv/Tests) in their current form |
 | 2025.1 | [Pedro Paulo Moreno Camargo](https://github.com/PedroPauloMorenoCamargo), [Pedro Balbo Portella](https://github.com/Vacbo), [Pedro Cliquet do Amaral](https://github.com/pcliquet) and [Caio Bertolani Travain](https://github.com/caiotravain) | the SoC and the peripherals | `riscv-SoC` and `FOSS-peripherals` (below) |
-| 2024.2 | Eduardo Schneider Monteiro de Barros (Computer Science), [Rodrigo Anciães Patelli](https://github.com/RodrigoAnciaes), Victor Luis Gama de Assis and [Arthur Martins de Souza Barreto](https://github.com/Arthur-Barreto) (Computer Engineering) | — | — |
+| 2024.2 | Eduardo Schneider Monteiro de Barros (Computer Science), [Rodrigo Anciães Patelli](https://github.com/RodrigoAnciaes), Victor Luis Gama de Assis and [Arthur Martins de Souza Barreto](https://github.com/Arthur-Barreto) (Computer Engineering) | the study "Exploring RISC-V CPU for Aerospace Applications": control of a BLDC motor (Six-Step and FOC algorithms) on the open-source RISC-V NEORV32, to find the hardware requirements of an aerospace CPU | [final report](https://pfe.insper.edu.br/arquivos/cti_renato_archer/projeto230/alineaqa/RELATRIO_FINAL.pdf) |
 | 2024.1 | [Luciano Felix](https://github.com/FelixLuciano), [Tiago Vitorino Seixas](https://github.com/TiagoSeixas2103), [Giancarlo Vanoni Ruggiero](https://github.com/gianvr) | the first core and the documentation | `core-old` and `docs` (below) |
 
 ## Where things are
