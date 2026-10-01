@@ -1,55 +1,57 @@
 # Insper RISC-V
 
-A RISC-V (RV32I + M) processor in VHDL with a 5-stage in-order pipeline, built at
-[Insper](https://www.insper.edu.br) as a capstone project: the core, its memories and
-peripherals, the board platform (Cyclone V), and the tools, tests and certification
-around them.
+🌐 [Português](https://github.com/insper-riscv/.github/blob/main/profile/README.md) · [English](https://github.com/insper-riscv/.github/blob/main/profile/README.en.md)
 
-Each repository has one responsibility. **Start at [RV32](https://github.com/insper-riscv/RV32)**:
-it pins a version of the others and runs everything together.
+Um processador RISC-V (RV32I + M) em VHDL, com pipeline de 5 estágios em ordem, feito no
+[Insper](https://www.insper.edu.br) como projeto de capstone: o core, suas memórias e
+periféricos, a plataforma da placa (Cyclone V), e as ferramentas, os testes e a
+certificação em volta.
+
+Cada repositório cuida de uma coisa. **Comece pelo [RV32](https://github.com/insper-riscv/RV32)**:
+ele fixa uma versão dos outros e roda tudo junto.
 
 ```bash
 git clone --recurse-submodules https://github.com/insper-riscv/RV32.git
 cd RV32
-make all        # checks, every repository's tests, and the 89-program simulation suite
+make all        # verificações, os testes de cada repositório e a suíte de simulação de 89 programas
 ```
 
-## The repositories
+## Os repositórios
 
-| Repository | Responsibility | Depends on |
+| Repositório | Responsabilidade | Depende de |
 | :--- | :--- | :--- |
-| [RV32](https://github.com/insper-riscv/RV32) | the parent: pins the versions of the set, KPI reports, integration CI | all, as submodules |
-| [Core](https://github.com/insper-riscv/Core) | the processor in VHDL, organized by ISA extension (`common/`, `I/`, `M/`); profiles `rv32i` and `rv32im`; entity tests | nothing |
-| [Memory](https://github.com/insper-riscv/Memory) | simulation models and the board's Quartus IPs | Core |
-| [Peripherals](https://github.com/insper-riscv/Peripherals) | memory-mapped GPIO and TIMER (UART later) | Core |
-| [TopLevel](https://github.com/insper-riscv/TopLevel) | the platforms: Quartus project, PLL, simulation top, runtime, memory map, testbench | Core, Memory, Peripherals, Tools |
-| [Tests](https://github.com/insper-riscv/Tests) | the test programs (`asm/`, `c/`), goldens, and the flows that run them in simulation and on the board | TopLevel, Tools |
-| [Certification](https://github.com/insper-riscv/Certification) | the official [riscv-arch-test](https://github.com/riscv/riscv-arch-test) (ACT4) suite against the core | Core, Memory, TopLevel, Tools |
-| [Tools](https://github.com/insper-riscv/Tools) | `riscv-tools`: compile, simulate, run on the board over JTAG, certify, check | Infra, when running |
-| [Infra](https://github.com/insper-riscv/Infra) | the machine: the toolchain image (RISC-V GCC with picolibc, Spike, GHDL, uv) every CI runs in, and the workstation guides | nothing |
+| [RV32](https://github.com/insper-riscv/RV32) | o pai: fixa as versões do conjunto, relatórios de KPI, CI de integração | todos, como submódulos |
+| [Core](https://github.com/insper-riscv/Core) | o processador em VHDL, organizado por extensão do ISA (`common/`, `I/`, `M/`); perfis `rv32i` e `rv32im`; testes por entidade | nada |
+| [Memory](https://github.com/insper-riscv/Memory) | modelos de simulação e as IPs do Quartus da placa | Core |
+| [Peripherals](https://github.com/insper-riscv/Peripherals) | GPIO e TIMER mapeados em memória (UART depois) | Core |
+| [TopLevel](https://github.com/insper-riscv/TopLevel) | as plataformas: projeto do Quartus, PLL, topo de simulação, runtime, mapa de memória, testbench | Core, Memory, Peripherals, Tools |
+| [Tests](https://github.com/insper-riscv/Tests) | os programas de teste (`asm/`, `c/`), os goldens e os fluxos que os rodam em simulação e na placa | TopLevel, Tools |
+| [Certification](https://github.com/insper-riscv/Certification) | a suíte oficial [riscv-arch-test](https://github.com/riscv/riscv-arch-test) (ACT4) contra o core | Core, Memory, TopLevel, Tools |
+| [Tools](https://github.com/insper-riscv/Tools) | `riscv-tools`: compilar, simular, rodar na placa por JTAG, certificar, verificar | Infra, ao executar |
+| [Infra](https://github.com/insper-riscv/Infra) | a máquina: a imagem de toolchain (GCC RISC-V com picolibc, Spike, GHDL, uv) em que todo CI roda, e os guias da workstation | nada |
 
 ```
-RV32 (parent, pins the versions)
+RV32 (o pai, fixa as versões)
  ├─ Core ◄─ Memory, Peripherals ◄─ TopLevel ◄─ Tests
  │                                     ▲           ▲
  │                                     └─ Certification
- └─ Tools (inside each, as a submodule) ◄─ Infra (the image it runs in)
+ └─ Tools (dentro de cada um, como submódulo) ◄─ Infra (a imagem em que roda)
 ```
 
-## Where things are
+## Onde está cada coisa
 
-- **How the pipeline works:** [Core's `docs/ARCHITECTURE.md`](https://github.com/insper-riscv/Core/blob/main/docs/ARCHITECTURE.md).
-- **How to add an ISA extension, and the bus and memory interface:** [Core's `docs/contracts/`](https://github.com/insper-riscv/Core/tree/main/docs/contracts).
-- **The memory map, the boot, and how a program runs on the board:** [TopLevel's `docs/`](https://github.com/insper-riscv/TopLevel/tree/main/docs).
-- **How to write a test and run it:** [Tools' `docs/`](https://github.com/insper-riscv/Tools/tree/main/docs) and the [Tests README](https://github.com/insper-riscv/Tests).
-- **Setting up a workstation and the CI runner:** [Infra](https://github.com/insper-riscv/Infra).
+- **Como o pipeline funciona:** [`docs/ARCHITECTURE.md` do Core](https://github.com/insper-riscv/Core/blob/main/docs/ARCHITECTURE.md).
+- **Como acrescentar uma extensão do ISA, e a interface de barramento e de memória:** [`docs/contracts/` do Core](https://github.com/insper-riscv/Core/tree/main/docs/contracts).
+- **O mapa de memória, o boot e como um programa roda na placa:** [`docs/` do TopLevel](https://github.com/insper-riscv/TopLevel/tree/main/docs).
+- **Como escrever um teste e rodá-lo:** [`docs/` do Tools](https://github.com/insper-riscv/Tools/tree/main/docs) e o [README do Tests](https://github.com/insper-riscv/Tests).
+- **Montar uma workstation e o runner do CI:** [Infra](https://github.com/insper-riscv/Infra).
 
-## Other repositories in the organization
+## Outros repositórios da organização
 
-[Diagram-Generator](https://github.com/insper-riscv/Diagram-Generator) is independent of the
-structure above. `core-old`, `FOSS-peripherals`, `riscv-SoC`, `development-infrastructure` and
-`docs` predate it and are not part of it; the state of the project before the split is the tag
-`pre-refactor` in each repository above, and what was retired is kept as `archive/*` tags in
+O [Diagram-Generator](https://github.com/insper-riscv/Diagram-Generator) é independente da
+estrutura acima. `core-old`, `FOSS-peripherals`, `riscv-SoC`, `development-infrastructure` e
+`docs` são anteriores a ela e não fazem parte dela; o estado do projeto antes da divisão é a tag
+`pre-refactor` em cada repositório acima, e o que foi aposentado fica nas tags `archive/*` do
 RV32.
 
-Everything is licensed under the Apache License 2.0.
+Tudo é licenciado sob a Apache License 2.0.
