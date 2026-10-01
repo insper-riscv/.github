@@ -49,7 +49,8 @@ Each group continued the work of the one before; the most recent comes first.
 | 2026.1 | Henrique Rocha Bomfim, Pedro Carvalho Ribeiro Neto, Luiz Felipe Borelli Durand, Luka Siqueira Ferreira de Figueiredo | the 5-stage pipeline with the M extension, the tests and the KPIs | [RV32](https://github.com/insper-riscv/RV32) and [Core](https://github.com/insper-riscv/Core) |
 | 2025.2 | Ilana Finger, Leonardo Paloschi, Lucas Lima, Pedro Ventura | L2IP (an RV32I), the development and the test infrastructure, where Infra, Tools and Tests came from | `archive/l2ip` in [RV32](https://github.com/insper-riscv/RV32), and [Infra](https://github.com/insper-riscv/Infra), [Tools](https://github.com/insper-riscv/Tools) and [Tests](https://github.com/insper-riscv/Tests) in their current form |
 | 2025.1 | Pedro Paulo Moreno Camargo and [Vacbo](https://github.com/Vacbo) | the SoC and the peripherals | `riscv-SoC` and `FOSS-peripherals` (below) |
-| 2024 to early 2025 | Luciano Felix, Tiago Vitorino Seixas, Giancarlo Vanoni Ruggiero | the first core and the documentation | `core-old` and `docs` (below) |
+| 2024.2 | Eduardo Schneider Monteiro de Barros (Computer Science), Rodrigo Anciães Patelli, Victor Luis Gama de Assis and Arthur Martins de Souza Barreto (Computer Engineering) | — | — |
+| 2024.1 | Luciano Felix, Tiago Vitorino Seixas, Giancarlo Vanoni Ruggiero | the first core and the documentation | `core-old` and `docs` (below) |
 
 ## Where things are
 
